@@ -4,7 +4,7 @@ jQuery(document).ready(function() {
 
 
 	/* styler config */
-	
+
 	default_settings = {
 		color: '#2773ae',
 		pattern: 'none', 			/* 'pattern_0', 'pattern_1' ... 'pattern_15' or 'none'  -  you can use if layout isn't  'full-width' */
@@ -14,41 +14,41 @@ jQuery(document).ready(function() {
 		sideBarPosition: 'left', 	/* 'left', 'right'  */
 		sideBarWidth: 'maxi' 		/* 'maxi', 'mini'  */
 	}
-	
-	enable_style_switcher = true;  /* enable or disable style switcher */
-	
-	/* end styler config */
-	
-	
-	
 
-	
+	enable_style_switcher = true;  /* enable or disable style switcher */
+
+	/* end styler config */
+
+
+
+
+
 	default_settings.pattern = 'js/style-switcher/patterns/' + default_settings.pattern + '.png';
 	default_settings.bg = 'js/style-switcher/images/' + default_settings.bg + '.jpg';
-	
+
 	if(jQuery('body').hasClass('admin')) {
 		directory = '../';
 	} else {
-		directory = '';
+		directory = '/assets/bizstrap/';
 	}
-	
-	
+
+
 	jQuery('head').append('<script type="text/javascript" src="' + directory + 'js/style-switcher/jquery.cookie.js">');
 
-	
+
 	if(enable_style_switcher){
-	
+
 		var colors_count = 8;
 		var patterns_count = 16;
 		var images_count = 4;
-		
+
 		var template = '<div id="mtp-toggle"><i class="moon-droplet"></i></div><div id="mtp-wrapper" style=""><div id="mtp-header">Style Switcher</div><div id="mtp-content"><div class="mtp-content-title">Layout style:</div><select class="mtp-layout-select"><option value="full-width">Full width</option><option value="boxed">Boxed</option><option value="boxed-attached">Boxed (attached)</option></select><div class="mtp-divider"></div><div class="mtp-content-title">Primary color:</div><span class="mtp-primary-color"></span><input type="text" value="#2773ae" class="mtp-color-field"><ul class="mtp-color clearfix"></ul><div class="clear"></div><div class="mtp-divider"></div><div class="mtp-content-title">Patterns:</div><ul class="mtp-background-pattern clearfix"></ul><div class="mtp-divider"></div><div class="mtp-content-title">Image examples:</div><ul class="mtp-background-image clearfix"></ul><div class="admin_options"><div class="mtp-divider"></div><div class="mtp-content-title">Top Nav Bar Style</div><div class="options-link top-nav-bar-style"><a href="#" class="static">Static</a><a href="#" class="fixed">Fixed</a></div><div class="mtp-divider"></div><div class="mtp-content-title">Side Bar Position</div><div class="options-link sidebarOpt side-bar-position"><a href="#" class="left">Left</a><a href="#" class="right">Right</a></div><div class="mtp-divider"></div><div class="mtp-content-title">Side Bar Width</div><div class="options-link sidebarOpt side-bar-width"><a href="#" class="mini">Mini</a><a href="#" class="maxi">Maxi</a></div></div></div></div>';
-		
+
 		jQuery('#over').append(template);
-		
-		
+
+
 		jQuery('head').append('<link type="text/css" rel="stylesheet" href="' + directory + 'js/style-switcher/styler.css"/><script type="text/javascript" src="' + directory + 'js/style-switcher/iris.min.js"></script>');
-		
+
 		for(var i = 0; i < colors_count; i++){
 			jQuery("#mtp-wrapper .mtp-color").append('<li class="color_' + i + '"></li>')
 		}
@@ -58,15 +58,15 @@ jQuery(document).ready(function() {
 		for(var i = 0; i < images_count; i++){
 			jQuery("#mtp-wrapper .mtp-background-image").append('<li class="image_' + i + '"></li>')
 		}
-		
+
 		colorSwitcherPosition();
-		
+
 		var initStyler = getThemeSettings();
 		if(initStyler) {
 			colorPicker(initStyler.color);
-		} 
+		}
 
-		
+
 		jQuery('.mtp-background-pattern li').click(function(){
 			if (jQuery('.mtp-layout-select').val() == 'full-width'){
 				alert('Please select "Boxed" layout!')
@@ -76,9 +76,9 @@ jQuery(document).ready(function() {
 				jQuery('body').css('background-image', 'url('+ directory + patternUrl +')').removeClass('background-cover').addClass('background-pattern');
 				setThemeSettings('pattern', patternUrl);
 			}
-			
-		});	
-		
+
+		});
+
 		jQuery('.mtp-background-image li').click(function(){
 			if (jQuery('.mtp-layout-select').val() == 'full-width'){
 				alert('Please select "Boxed" layout!')
@@ -88,7 +88,7 @@ jQuery(document).ready(function() {
 				jQuery('body').css('background-image', 'url('+ directory + imgUrl +')').removeClass('background-pattern').addClass('background-cover');
 				setThemeSettings('bg', imgUrl);
 			}
-		});	
+		});
 		jQuery('#mtp-toggle').click(function(e){
 			if(jQuery(this).is('.mtp-toggle-close')){
 				jQuery('#mtp-wrapper, #mtp-toggle').stop(true, true).animate({'right': '-239px'}, 300);
@@ -107,12 +107,12 @@ jQuery(document).ready(function() {
 				setTimeout(function(){
 					jQuery('#mtp-toggle').toggleClass('mtp-toggle-close');
 				}, 500)
-			} 
+			}
 		})
 		jQuery('#mtp-wrapper').click(function(e){
 			e.stopPropagation();
 		})
-		
+
 		jQuery('.mtp-layout-select').change(function(){
 			var currentClass = jQuery('#out_container').attr('class');
 			jQuery('#out_container').removeClass(currentClass).addClass(jQuery(this).val());
@@ -120,21 +120,21 @@ jQuery(document).ready(function() {
 			setThemeSettings('layout', currentClass);
 			jQuery(window).trigger('resize');
 		});
-		
+
 		jQuery('.mtp-primary-color').click(function(){
 			jQuery('.iris-picker').toggle();
 		});
-			
-		
-		
+
+
+
 		jQuery(".mtp-color li").click(function(){
-			var color = rgb2hex(jQuery(this).css('background-color'));	
+			var color = rgb2hex(jQuery(this).css('background-color'));
 			setThemeSettings('color', color);
 			changeColor(color);
 			jQuery(".mtp-color-field").val(color);
 			jQuery('.mtp-color-field').iris('color', color);
 		})
-		
+
 		jQuery('.top-nav-bar-style a.static').on('click', function(e) {
 			e.preventDefault();
 			jQuery(this).addClass('active').siblings('a').removeClass('active');
@@ -181,26 +181,26 @@ jQuery(document).ready(function() {
 
 })
 function setThemeSettings(key, value){
-	var themeSettings = jQuery.parseJSON(jQuery.cookie('themeSettings')); 
-	
+	var themeSettings = jQuery.parseJSON(jQuery.cookie('themeSettings'));
+
 	if(!themeSettings) themeSettings = {};
-	
+
 	themeSettings[key] = value;
 	if(key == 'pattern') themeSettings['bg'] = '';
 	if(key == 'bg') themeSettings['pattern'] = '';
-	
+
 	var s = JSON.stringify(themeSettings);
 	jQuery.cookie('themeSettings', s, { path: '/' });
 }
 
 function getThemeSettings(){
 	if(enable_style_switcher){
-		var themeSettings = jQuery.parseJSON(jQuery.cookie('themeSettings')); 
+		var themeSettings = jQuery.parseJSON(jQuery.cookie('themeSettings'));
 	} else {
 		var themeSettings = default_settings;
 	}
 	if(!themeSettings) themeSettings = default_settings;
-	
+
 	if(themeSettings.bg && themeSettings.bg != 'none' && themeSettings.layout != 'full-width'){
 		jQuery('body').css('background-image', 'url('+ directory + themeSettings.bg +')').removeClass('background-pattern').addClass('background-cover');
 	} else if(themeSettings.pattern && themeSettings.pattern != 'none' && themeSettings.layout != 'full-width'){
@@ -213,8 +213,8 @@ function getThemeSettings(){
 		jQuery('#out_container').removeClass(currentClass).addClass(themeSettings.layout);
 		jQuery('.mtp-layout-select option[value="' + themeSettings.layout + '"]').attr('selected', true).siblings().removeAttr('selected');
 	}
-	if(themeSettings.color) changeColor(themeSettings.color); 
-	
+	if(themeSettings.color) changeColor(themeSettings.color);
+
 	if(themeSettings.topNavBarStyle == 'fixed') {
 		jQuery('.top-nav-bar-style a.fixed').addClass('active').siblings('a').removeClass('active');
 		jQuery('body').addClass('padTop44');
@@ -272,7 +272,7 @@ function colorPicker(color){
 		color: color,
 		mode: 'hsl',
 		change: function(event, ui) {
-			
+
 			var color = ui.color.toString();
 			setThemeSettings('color', color);
 			changeColor(color);
@@ -284,7 +284,7 @@ function colorPicker(color){
 
 
 jQuery(window).load(function(){
-	jQuery('body').css('visibility', 'visible');	
+	jQuery('body').css('visibility', 'visible');
 })
 
 jQuery(window).resize(function(){

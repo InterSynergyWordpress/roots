@@ -251,7 +251,7 @@ body {
         padding: 51px 35px 35px;
     }
     .logo {
-        margin: 27px 0 27px 20px;
+        margin: 15px 0 15px 20px;
     }
     .logo .logo {
         margin: 0;
@@ -1290,6 +1290,10 @@ blockquote .autor {
     text-align: center;
     margin-top: 26px;
 }
+
+li {
+    line-height: inherit;
+}
 ul.socials li {
     margin-left: 5px;
     display: inline-block;
@@ -1423,7 +1427,7 @@ ul.icons {
     box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.2);
     list-style: none outside none;
     z-index: 1000;
-    top: 98%;
+    top: 98%;dropdown-menu
 }
 .in .dropdown .dropdown-menu {
     box-shadow: none;
@@ -1434,6 +1438,7 @@ ul.icons {
 .navbar .nav > li > .dropdown-menu:before {
     border: none;
 }
+
 .dropdown-menu {
     border: none;
     margin: 0;
@@ -1489,6 +1494,7 @@ ul.icons {
     height: 27px;
     background: #ffffff url('../img/menu_icons.png') scroll center 23px no-repeat;
 }
+
 .navbar .nav > li.single a i {
     background: none;
 }
@@ -1500,6 +1506,7 @@ ul.icons {
     margin-bottom: 0;
     padding: 15px 15px 8px;
     text-shadow: none;
+    height: 22px;
 }
 .nav-tabs .open .dropdown-toggle, .nav-pills .open .dropdown-toggle, .nav > li.dropdown.open.active > a:hover {
     background-color: #999999;
@@ -1527,7 +1534,7 @@ ul.icons {
     background-color: #333333;
 }
 .navbar .nav .active > a, .navbar .nav li:hover > a {
-    padding-top: 12px;
+    padding-top: 13px;
 }
 .navbar .nav .dropdown-menu li:hover a {
     border: none;
@@ -2611,7 +2618,7 @@ div.alert {
     margin-left: 0;
 }
 .hero-list {
-    margin-bottom: 40px;    
+    margin-bottom: 40px;
 }
 .hero-list .span3 {
     text-align: center;
@@ -2621,10 +2628,10 @@ div.alert {
 .hero-list .image-wrapper {
     text-align: center;
 }
-.hero-list img {    
+.hero-list img {
     padding: 0 11px;
 }
-.index1 .hero-list img {    
+.index1 .hero-list img {
     padding: 0;
 }
 .hero-list-description {
@@ -2651,7 +2658,7 @@ div.alert {
     float: none;
 }
 .dark-hero {
-    text-align: center;    
+    text-align: center;
     padding: 15px;
     margin-bottom: 40px;
 }
