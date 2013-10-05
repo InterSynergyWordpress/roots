@@ -13,18 +13,51 @@
     }
   ?>
 
-  <div class="wrap container" role="document">
-    <div class="content row">
-      <div class="main <?php echo roots_main_class(); ?>" role="main">
-        <?php include roots_template_path(); ?>
-      </div><!-- /.main -->
-      <?php if (roots_display_sidebar()) : ?>
-        <aside class="sidebar <?php echo roots_sidebar_class(); ?>" role="complementary">
-          <?php include roots_sidebar_path(); ?>
-        </aside><!-- /.sidebar -->
-      <?php endif; ?>
-    </div><!-- /.content -->
-  </div><!-- /.wrap -->
+        <div class="main-content <?php echo roots_main_class(); ?>" role="document">
+            <div class="container">
+
+                <?php if(!is_front_page()): ?>
+                <div id="breadcrumb">
+                    <ul>
+                        <?php
+                            if(function_exists('bcn_display')):
+                                bcn_display_list();
+                            else:
+                                bizstrap_breadcrumb();
+                            endif;
+                        ?>
+                    </ul>
+                </div>
+                <?php endif; ?>
+
+                <?php if (roots_display_sidebar()) : ?>
+                <div class="row show-grid">
+                    <div id="left-sidebar" class="span3 sidebar <?php echo roots_sidebar_class(); ?>" role="complementary">
+                        <div class="side-nav sidebar-block">
+
+                            <aside>
+                              <?php include roots_sidebar_path(); ?>
+                            </aside>
+
+                        </div>
+                    </div>
+
+                    <div class="span9 main-column two-columns-left <?php echo roots_main_class(); ?>" role="main">
+                        <article>
+                            <?php include roots_template_path(); ?>
+                        </article>
+                    </div>
+                </div>
+                <?php else: ?>
+                                <?php include roots_template_path(); ?>
+                <?php endif; ?>
+
+                <?php include bizstrap_sidebar_footer_path(); ?>
+            </div>
+
+            <?php get_template_part('templates/footer', 'header'); ?>
+
+        </div>
 
   <?php get_template_part('templates/footer'); ?>
 

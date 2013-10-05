@@ -576,10 +576,13 @@ body {
         padding: 51px 35px 35px;
     }
     .logo {
-        margin: 27px 0 27px 20px;
+        margin: 15px 0 15px 20px;
     }
     .logo .logo {
         margin-left: 0;
+    }
+    .logo .logo img {
+        width: 50%;
     }
     .portfolio-grid-1 .hp-wrapper .bottom-block-optional {
         text-align: center;
@@ -670,11 +673,14 @@ body {
         text-align: center;
         margin: 14px 0;
     }
+    .footer-address {
+        text-align: center;
+    }
     .head_phone {
         text-align: center;
     }
     ul.socials {
-        margin: 0 auto 35px;
+        margin: 0 auto 10px;
         overflow: hidden;
         margin-top: 20px;
         text-align: center;
@@ -1845,6 +1851,7 @@ input.btn {
     float: left;
     width: 100%;
     margin-bottom: 10px;
+    min-height: 44px;
 }
 #breadcrumb ul {
     float: left;
@@ -3076,13 +3083,17 @@ p#note {
 .footer-wrapper .footer-right h4, .footer-wrapper .footer-center h4 {
     margin-bottom: 0;
 }
-.footer-navigate {
-    list-style: none;
-    margin-left: 0;
-}
 .footer-center p {
     color: #cbcbcb;
     padding: 12px 0 0;
+}
+.footer-center div {
+    color: #cbcbcb;
+    padding: 12px 0 0;
+}
+.footer-navigate ul {
+    list-style: none;
+    margin-left: 0;
 }
 .footer-navigate li {
     border-bottom: 1px solid #898989;
