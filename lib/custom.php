@@ -11,14 +11,10 @@ function bizstrap_scripts() {
   // wp_enqueue_style('bizstrap_rs_responsive', get_template_directory_uri() . '/assets/bizstrap/css/rs-responsive.css');
   wp_enqueue_style('bootstrap', get_template_directory_uri() . '/assets/bizstrap/css/bootstrap.css');
   wp_enqueue_style('bizstrap_custom', get_template_directory_uri() . '/assets/bizstrap/css/custom.css');
-  wp_enqueue_style('bizstrap_styler', get_template_directory_uri() . '/assets/bizstrap/css/styler.css');
-  wp_enqueue_style('isotope', get_template_directory_uri() . '/assets/bizstrap/css/isotope.css');
   wp_enqueue_style('bizstrap_color_scheme', get_template_directory_uri() . '/assets/bizstrap/css/color_scheme.css');
-  wp_enqueue_style('bizstrap_fontapis', 'http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,700italic');
   wp_enqueue_style('bizstrap_font_awsome', get_template_directory_uri() . '/assets/bizstrap/css/font-awesome.css');
   wp_enqueue_style('bizstrap_font_awsome_ie7', get_template_directory_uri() . '/assets/bizstrap/css/font-awesome-ie7.css');
-  // wp_enqueue_style('flexslider', get_template_directory_uri() . '/assets/bizstrap/css/flexslider.css');
-  // wp_enqueue_style('fancybox', get_template_directory_uri() . '/assets/bizstrap/css/jquery.fancybox.css');
+  wp_enqueue_style('bizstrap_fontapis', '//fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,700italic');
 
   wp_enqueue_style('intersynergy', get_template_directory_uri() . '/assets/css/intersynergy.css');
 
@@ -31,15 +27,18 @@ function bizstrap_scripts() {
   wp_register_script('bootstrap', get_template_directory_uri() . '/assets/bizstrap/js/bootstrap.js', false, null, false);
   wp_enqueue_script('bootstrap');
 
-  wp_register_script('style_switcher', get_template_directory_uri() . '/assets/bizstrap/js/style-switcher/style-switcher.js', false, null, false);
+  wp_register_script('style_switcher', get_template_directory_uri() . '/assets/bizstrap/js/style-switcher/style-switcher.js', false, null, true);
   wp_enqueue_script('style_switcher');
 
+  wp_enqueue_style('flexslider', get_template_directory_uri() . '/assets/bizstrap/css/flexslider.css');
   wp_register_script('flexslider', get_template_directory_uri() . '/assets/bizstrap/js/jquery.flexslider-min.js', false, null, false);
   wp_enqueue_script('flexslider');
 
+  wp_enqueue_style('isotope', get_template_directory_uri() . '/assets/bizstrap/css/isotope.css');
   wp_register_script('isotope', get_template_directory_uri() . '/assets/bizstrap/js/jquery.isotope.js', false, null, false);
   wp_enqueue_script('isotope');
 
+  wp_enqueue_style('fancybox', get_template_directory_uri() . '/assets/bizstrap/css/jquery.fancybox.css');
   wp_register_script('fancybox', get_template_directory_uri() . '/assets/bizstrap/js/jquery.fancybox.pack.js', false, null, false);
   wp_enqueue_script('fancybox');
 
@@ -48,7 +47,7 @@ function bizstrap_scripts() {
   wp_enqueue_script('bizstrap_custom');
 
 }
-add_action('wp_enqueue_scripts', 'bizstrap_scripts', 200);
+add_action('wp_enqueue_scripts', 'bizstrap_scripts', 3000);
 
 
 function bizstrap_sidebar_footer_path() {
@@ -57,6 +56,15 @@ function bizstrap_sidebar_footer_path() {
 
 function bizstrap_widgets_init() {
   // Sidebars
+
+  register_sidebar(array(
+    'name'          => __('Social', 'roots'),
+    'id'            => 'sidebar-social',
+    'before_widget' => '<section class="widget %1$s %2$s"><div class="widget-inner">',
+    'after_widget'  => '</div></section>',
+    'before_title'  => '<h3>',
+    'after_title'   => '</h3>',
+  ));
 
   register_sidebar(array(
     'name'          => __('Footer', 'roots'),

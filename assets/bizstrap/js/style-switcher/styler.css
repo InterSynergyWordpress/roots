@@ -1,13 +1,13 @@
 #mtp-toggle{
-	width:40px; 
+	width:40px;
 	padding:10px 0;
 	background-color:#2773ae;
-	background-image:url(paintbrush_w.png); 
+	background-image:url(paintbrush_w.png);
 	background-size:80%;
 	background-position:center;
 	background-repeat:no-repeat;
 	height:25px;
-	position:fixed; 
+	position:fixed;
 	top:50%;
 	margin-top:-175px;
 	margin-right:239px;
@@ -15,28 +15,28 @@
 	font-size:18px;
 	color:#fff;
 	line-height:1;
-	cursor:pointer; 
-	z-index:9999; 
+	cursor:pointer;
+	z-index:9999;
 	border-radius:3px 0 0 3px;
 	border:1px solid #fff;
 	border-right:0;
 	right:-239px;
 }
 #mtp-toggle.absolute {
-	position:absolute;
+/*	position:absolute;
 	top:68px;
-	margin-top:0;
+	margin-top:0;*/
 }
 
 #mtp-wrapper{
-	width:239px; 
-	min-height:400px; 
-	background:#fff; 
-	position:fixed; 
+	width:239px;
+	min-height:400px;
+	background:#fff;
+	position:fixed;
 	top:50%;
 	right:-239px;
-	margin-top:-231px;	
-	z-index:9999; 
+	margin-top:-231px;
+	z-index:9999;
 	-webkit-border-top-left-radius: 3px;
 	-webkit-border-bottom-left-radius: 3px;
 	-moz-border-radius-topleft: 3px;
@@ -46,8 +46,8 @@
 }
 
 #mtp-toggle.mtp-toggle-close + #mtp-wrapper {
-	-moz-box-shadow: 0px 1px 12px 2px rgba(0, 0, 0, 0.149);  
-	-webkit-box-shadow: 0px 1px 12px 2px rgba(0, 0, 0, 0.149); 
+	-moz-box-shadow: 0px 1px 12px 2px rgba(0, 0, 0, 0.149);
+	-webkit-box-shadow: 0px 1px 12px 2px rgba(0, 0, 0, 0.149);
 	box-shadow: 0px 1px 12px 2px rgba(0, 0, 0, 0.149);
 }
 .admin #mtp-wrapper {
@@ -57,14 +57,14 @@
 	margin-top:-239px;
 }
 #mtp-wrapper.absolute {
-	position:absolute;
+/*	position:absolute;
 	top:28px;
-	margin-top:0;
+	margin-top:0;*/
 }
 #mtp-wrapper #mtp-header{
-	border-bottom:1px solid #eee; 
-	padding:10px 20px; 
-	font-weight:bold; 
+	border-bottom:1px solid #eee;
+	padding:10px 20px;
+	font-weight:bold;
 	font-size:12px;
 }
 #mtp-content{
@@ -88,13 +88,13 @@
 	height:19px;
 	border:none;
 	font-size:11px;
-	box-shadow: none; -moz-box-shadow:none; -webkit-box-shadow: none; 
+	box-shadow: none; -moz-box-shadow:none; -webkit-box-shadow: none;
 	cursor:pointer;
 }
 .mtp-primary-color {
 	background-color:#2773ae;
-	display:inline-block; 
-	width:46px; 
+	display:inline-block;
+	width:46px;
 	height:27px;
 	float:left;
 	cursor:pointer;
@@ -145,6 +145,16 @@
 .mtp-background-image li.image_1 {background-image:url('images/image_1_s.png');}
 .mtp-background-image li.image_2 {background-image:url('images/image_2_s.png');}
 .mtp-background-image li.image_3 {background-image:url('images/image_3_s.png');}
+.mtp-background-image li.image_4 {background-image:url('images/image_4_s.png');}
+.mtp-background-image li.image_5 {background-image:url('images/image_5_s.png');}
+.mtp-background-image li.image_6 {background-image:url('images/image_6_s.png');}
+.mtp-background-image li.image_7 {background-image:url('images/image_7_s.png');}
+.mtp-background-image li.image_8 {background-image:url('images/image_8_s.png');}
+.mtp-background-image li.image_9 {background-image:url('images/image_9_s.png');}
+.mtp-background-image li.image_10 {background-image:url('images/image_10_s.png');}
+.mtp-background-image li.image_11 {background-image:url('images/image_11_s.png');}
+.mtp-background-image li.image_12 {background-image:url('images/image_12_s.png');}
+.mtp-background-image li.image_13 {background-image:url('images/image_13_s.png');}
 .mtp-background-image li {
 	background-size:cover;
 	}
@@ -157,16 +167,18 @@
 .mtp-color li.color_5 {background:#b0151a;}
 .mtp-color li.color_6 {background:#ffc100;}
 .mtp-color li.color_7 {background:#5caf91;}
+.mtp-color li.color_8 {background:#2773ae;}
+.mtp-color li.color_9 {background:#008dd2;}
 
 body.background-pattern{
-	background-repeat:repeat; 
-	background-position: center; 
+	background-repeat:repeat;
+	background-position: center;
 	background-attachment:scroll;
 }
 
 body.background-cover{
-	background-repeat:no-repeat; 
-	background-position: center; 
+	background-repeat:no-repeat;
+	background-position: center;
 	background-attachment:fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;

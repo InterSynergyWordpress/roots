@@ -6,16 +6,17 @@ jQuery(document).ready(function() {
 	/* styler config */
 
 	default_settings = {
-		color: '#2773ae',
+		color: '#008dd2',
 		pattern: 'none', 			/* 'pattern_0', 'pattern_1' ... 'pattern_15' or 'none'  -  you can use if layout isn't  'full-width' */
-		bg: 'none', 				/* 'image_0',  'image_1'  ... 'image_3' or 'none'  -  you can use if layout isn't  'full-width' */
-		layout: 'full-width', 		/* 'full-width', 'boxed', 'boxed-attached'  */
+		bg: 'image_11', 				/* 'image_0',  'image_1'  ... 'image_3' or 'none'  -  you can use if layout isn't  'full-width' */
+		layout: 'boxed', 		/* 'full-width', 'boxed', 'boxed-attached'  */
 		topNavBarStyle: 'static', 	/* 'static', 'fixed'  */
 		sideBarPosition: 'left', 	/* 'left', 'right'  */
-		sideBarWidth: 'maxi' 		/* 'maxi', 'mini'  */
+		sideBarWidth: 'mini' 		/* 'maxi', 'mini'  */
 	}
 
 	enable_style_switcher = true;  /* enable or disable style switcher */
+    style_switcher_droplet = false;
 
 	/* end styler config */
 
@@ -38,13 +39,15 @@ jQuery(document).ready(function() {
 
 	if(enable_style_switcher){
 
-		var colors_count = 8;
+		var colors_count = 10;
 		var patterns_count = 16;
-		var images_count = 4;
+		var images_count = 13;
 
 		var template = '<div id="mtp-toggle"><i class="moon-droplet"></i></div><div id="mtp-wrapper" style=""><div id="mtp-header">Style Switcher</div><div id="mtp-content"><div class="mtp-content-title">Layout style:</div><select class="mtp-layout-select"><option value="full-width">Full width</option><option value="boxed">Boxed</option><option value="boxed-attached">Boxed (attached)</option></select><div class="mtp-divider"></div><div class="mtp-content-title">Primary color:</div><span class="mtp-primary-color"></span><input type="text" value="#2773ae" class="mtp-color-field"><ul class="mtp-color clearfix"></ul><div class="clear"></div><div class="mtp-divider"></div><div class="mtp-content-title">Patterns:</div><ul class="mtp-background-pattern clearfix"></ul><div class="mtp-divider"></div><div class="mtp-content-title">Image examples:</div><ul class="mtp-background-image clearfix"></ul><div class="admin_options"><div class="mtp-divider"></div><div class="mtp-content-title">Top Nav Bar Style</div><div class="options-link top-nav-bar-style"><a href="#" class="static">Static</a><a href="#" class="fixed">Fixed</a></div><div class="mtp-divider"></div><div class="mtp-content-title">Side Bar Position</div><div class="options-link sidebarOpt side-bar-position"><a href="#" class="left">Left</a><a href="#" class="right">Right</a></div><div class="mtp-divider"></div><div class="mtp-content-title">Side Bar Width</div><div class="options-link sidebarOpt side-bar-width"><a href="#" class="mini">Mini</a><a href="#" class="maxi">Maxi</a></div></div></div></div>';
 
-		jQuery('#over').append(template);
+        if(style_switcher_droplet === true) {
+    		jQuery('#over').append(template);
+        }
 
 
 		jQuery('head').append('<link type="text/css" rel="stylesheet" href="' + directory + 'js/style-switcher/styler.css"/><script type="text/javascript" src="' + directory + 'js/style-switcher/iris.min.js"></script>');
@@ -284,7 +287,7 @@ function colorPicker(color){
 
 
 jQuery(window).load(function(){
-	jQuery('body').css('visibility', 'visible');
+	jQuery('body').css({opacity: 0, visibility: "visible"}).animate({opacity: 1}, 200);
 })
 
 jQuery(window).resize(function(){

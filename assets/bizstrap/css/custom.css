@@ -1,8 +1,21 @@
 /*Custom CSS*/
-
+html {
+    overflow: -moz-scrollbars-vertical;
+    overflow-y: scroll;
+}
 /*Custom Landscapes Start*/
 body {
-	visibility:hidden;}
+	visibility:hidden;
+    opacity: 0;
+    background-image: url(/assets/bizstrap/js/style-switcher/images/image_11.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
 
 #out_container {
     margin:0 auto;
@@ -66,7 +79,7 @@ body {
     }
     ul.socials {
         float: right;
-        margin-top: 20px;
+        margin-top: 10px;
         text-align: center;
     }
     .carousel-caption {
@@ -256,6 +269,13 @@ body {
     .logo .logo {
         margin: 0;
     }
+    .logo-tagline {
+        margin-top: 50px;
+        margin-left: 20px;
+        display: inline-block !important;
+        font-size: 1.1em;
+        text-align: center;
+    }
     .mini-blocks .block1 {
         background-image: linear-gradient(bottom, #FFFFFF 89%, #F9F9F9 98%, #F0F0F0 100%);
         background-image: -o-linear-gradient(bottom, #FFFFFF 89%, #F9F9F9 98%, #F0F0F0 100%);
@@ -359,7 +379,7 @@ body {
     }
     ul.socials {
         float: right;
-        margin-top: 20px;
+        margin-top: 10px;
         text-align: center;
     }
     .contact-info ul.socials {
@@ -576,13 +596,14 @@ body {
         padding: 51px 35px 35px;
     }
     .logo {
-        margin: 15px 0 15px 20px;
+        margin: 10px 0 10px 20px;
     }
     .logo .logo {
         margin-left: 0;
+        float: none;
     }
     .logo .logo img {
-        width: 50%;
+        width: 40%;
     }
     .portfolio-grid-1 .hp-wrapper .bottom-block-optional {
         text-align: center;
@@ -672,6 +693,7 @@ body {
     .logo {
         text-align: center;
         margin: 14px 0;
+        float: none;
     }
     .footer-address {
         text-align: center;
@@ -682,7 +704,7 @@ body {
     ul.socials {
         margin: 0 auto 10px;
         overflow: hidden;
-        margin-top: 20px;
+        margin-top: 10px;
         text-align: center;
     }
     .contact-info ul.socials {
@@ -948,9 +970,9 @@ body {
         width: auto;
     }
     ul.socials {
-        margin: 0 auto 35px;
+        text-align: center;
         overflow: hidden;
-        margin-top: 20px;
+        margin-top: 10px;
     }
     .carousel-caption {
         right: 0;
@@ -1368,7 +1390,7 @@ ul.icons {
     color: #666666;
     font-family: 'Open Sans',Arial,sans-serif;
     font-size: 18px;
-    margin-top: 25px;
+    margin-top: 20px;
     padding-bottom: 0;
 }
 .navbar .nav .open .dropdown-menu .active a {
@@ -3109,5 +3131,17 @@ p#note {
 .footer-bottom p a {
     color: #ffffff;
 }
-/*Footer End*/
 
+.footer-bottom .row > .span8 p,
+.footer-bottom .row > .span4 p {
+    line-height: 28px;
+}
+/*Footer End*/
+.simple-social-icons ul li {
+background: none !important;
+border: none !important;
+float: left !important;
+list-style-type: none !important;
+margin: 0 !important;
+padding: 0 !important;
+}

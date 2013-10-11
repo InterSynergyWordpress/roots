@@ -3,24 +3,24 @@ body {
 }
 
 #mtp-toggle{
-	width:40px; 
+	width:40px;
 	padding:10px 0;
 	background-color:#2773ae;
-	background-image:url(../img/paintbrush_w.png); 
+	background-image:url(../img/paintbrush_w.png);
 	background-size:80%;
 	background-position:center;
 	background-repeat:no-repeat;
 	height:25px;
-	position:fixed; 
+	position:fixed;
 	top:50%;
 	margin-top:-239px;
-	right:0px; 
+	right:0px;
 	text-align:center;
 	font-size:18px;
 	color:#fff;
 	line-height:1;
-	cursor:pointer; 
-	z-index:9999; 
+	cursor:pointer;
+	z-index:9999;
 	border-radius:3px 0 0 3px;
 	border:1px solid #fff;
 	border-right:0;
@@ -35,22 +35,22 @@ body {
 }
 
 #mtp-wrapper{
-	width:239px; 
-	min-height:400px; 
-	background:#fff; 
-	position:fixed; 
+	width:239px;
+	min-height:400px;
+	background:#fff;
+	position:fixed;
 	top:50%;
-	margin-top:-279px;	
-	right:0; 
-	z-index:9999; 
+	margin-top:-279px;
+	right:0;
+	z-index:9999;
 	-webkit-border-top-left-radius: 3px;
 	-webkit-border-bottom-left-radius: 3px;
 	-moz-border-radius-topleft: 3px;
 	-moz-border-radius-bottomleft: 3px;
 	border-top-left-radius: 3px;
 	border-bottom-left-radius: 3px;
-	-moz-box-shadow: 0px 1px 12px 2px rgba(0, 0, 0, 0.149);  
-	-webkit-box-shadow: 0px 1px 12px 2px rgba(0, 0, 0, 0.149); 
+	-moz-box-shadow: 0px 1px 12px 2px rgba(0, 0, 0, 0.149);
+	-webkit-box-shadow: 0px 1px 12px 2px rgba(0, 0, 0, 0.149);
 	box-shadow: 0px 1px 12px 2px rgba(0, 0, 0, 0.149);
 }
 #mtp-wrapper.absolute {
@@ -59,9 +59,9 @@ body {
 	margin-top:0;
 }
 #mtp-wrapper #mtp-header{
-	border-bottom:1px solid #eee; 
-	padding:10px 20px; 
-	font-weight:bold; 
+	border-bottom:1px solid #eee;
+	padding:10px 20px;
+	font-weight:bold;
 	font-size:12px;
 }
 #mtp-content{
@@ -84,13 +84,13 @@ body {
 	height:19px;
 	border:none;
 	font-size:11px;
-	box-shadow: none; -moz-box-shadow:none; -webkit-box-shadow: none; 
+	box-shadow: none; -moz-box-shadow:none; -webkit-box-shadow: none;
 	cursor:pointer;
 }
 .mtp-primary-color {
 	background-color:#2773ae;
-	display:inline-block; 
-	width:46px; 
+	display:inline-block;
+	width:46px;
 	height:27px;
 	float:left;
 	cursor:pointer;
@@ -155,14 +155,14 @@ body {
 .mtp-color li.color_7 {background:#5caf91;}
 
 body.background-pattern{
-	background-repeat:repeat; 
-	background-position: center; 
+	background-repeat:repeat;
+	background-position: center;
 	background-attachment:scroll;
 }
 
 body.background-cover{
-	background-repeat:no-repeat; 
-	background-position: center; 
+	background-repeat:no-repeat;
+	background-position: center;
 	background-attachment:fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
