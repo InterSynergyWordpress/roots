@@ -1,4 +1,4 @@
-﻿@charset "utf-8";
+@charset "utf-8";
 /* CSS Document */
 
 * {
@@ -23,7 +23,7 @@ body {
 .clearfix:after {
 	content:'';
 	display:block;
-	clear:both;	
+	clear:both;
 }
 
 img {
@@ -41,14 +41,14 @@ input[type="submit"], label {
 
 textarea {
 	overflow:auto;}
-	
+
 a {
 	outline:none;
 }
 
 a:hover {
 	text-decoration:none;}
-	
+
 .in {
 	margin:0 auto;}
 
@@ -57,7 +57,7 @@ a:hover {
 	overflow:hidden;
 }
 #header {
-	margin-bottom:40px;	
+	margin-bottom:40px;
 	border-top:5px solid #2773ae;
 }
 #header .top {}
@@ -179,7 +179,7 @@ a:hover {
 	line-height:156px;
 	padding-left:10px;
 	box-sizing:border-box;
-	-moz-box-sizing:border-box;	
+	-moz-box-sizing:border-box;
 }
 #solutions li:last-child a:hover .img:after {
     content: "";
@@ -214,7 +214,7 @@ a:hover {
 	color:#ffffff;
 	text-shadow:0 1px 0 rgba(0,0,0,.33);
 	text-align:center;}
-	
+
 @media (min-width: 768px) and (max-width: 1000px) {
 	#solutions {
 		height:728px;
@@ -224,7 +224,7 @@ a:hover {
 	}
 	#solutions li:first-child:after, #solutions li:first-child + li:after {
 		display:none;}
-	
+
 }
 @media (max-width: 767px) {
 	#solutions {
@@ -240,7 +240,7 @@ a:hover {
 	#solutions li:first-child:after, #solutions li:first-child + li:after {
 		display:none;}
 	#header .top .in .main_header {
-		font-size:30px;	
+		font-size:30px;
 	}
 	#header .top .in .main_header span {
 		font-size:26px;}

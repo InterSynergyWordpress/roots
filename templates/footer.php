@@ -27,14 +27,14 @@
             <div class="footer-bottom">
                 <div class="container">
                     <div class="row show-grid">
-                        <div class="span8">
+                        <div class="span8 hidden-phone">
                             <p>Copyright &copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?> - All Rights Reserved.</p>
                         </div>
                         <div class="span4 pagination-right">
                             <p>
                                 Designed & made by: &nbsp;
                                 <a href="http://www.intersynergy.pl" target="_blank" title="consulting it - łódź">
-                                    <img alt="InterSynergy" title="InterSynergy" width="142px" src="/assets/img/intersynergy-white.png" />
+                                    <img alt="InterSynergy" title="consulting it" width="142px" src="/assets/img/intersynergy-white.png" />
                                 </a>
                             </p>
                         </div>

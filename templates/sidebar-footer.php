@@ -1,10 +1,16 @@
+<?php if (!is_page('klienci')) : ?>
 <div class="hidden-phone">
-                <hr>
-
+        <hr>
                 <div class="main-block clients">
                     <div class="title-wrapper">
-                        <h2>Clients</h2>
+                        <h2>Nasi klienci</h2>
                     </div>
+
+<?php
+        if (function_exists('mc_clients_show')) :
+                mc_clients_show('5', 'transparent', 'responsive', '-1', 7, 'date', 'asc');
+        else:
+?>
                     <div class="row show-grid">
                         <div class="span12">
                             <div id="clients" class="row show-grid">
@@ -29,7 +35,10 @@
                             </div>
                         </div>
                     </div>
+<?php endif; ?>
                 </div>
 
 <?php dynamic_sidebar('sidebar-footer'); ?>
+
 </div>
+<?php endif; ?>

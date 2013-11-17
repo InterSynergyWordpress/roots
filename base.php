@@ -32,7 +32,7 @@
 
                 <?php if (roots_display_sidebar()) : ?>
                 <div class="row show-grid">
-                    <div id="left-sidebar" class="span3 sidebar <?php echo roots_sidebar_class(); ?>" role="complementary">
+                    <div id="left-sidebar" class="span3 sidebar <?php echo roots_sidebar_class(); ?> hidden-phone" role="complementary">
                         <div class="side-nav sidebar-block">
 
                             <aside>

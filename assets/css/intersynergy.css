@@ -30,3 +30,49 @@
     top: 11px;
     left: -6px;
 }
+
+
+.two-columns-left article p {
+    font-size: 13px;
+    line-height: 21px;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+.widget-header-info i {
+    font-size: .8em;
+    line-height: 23px;
+    color: #008DD2;
+}
+
+.widget_nav_menu,
+.widget_categories,
+.widget_recent_entries,
+.widget_archive,
+.widget_tag_cloud {
+    margin-bottom: 25px;
+}
+
+
+.recent-tweets {
+    background-color: #2773ae !important;
+    border-top: 5px solid #008dd2;
+    line-height: 50px;
+    color:#fff;
+    font-size: 1.1em;
+}
+
+.recent-tweets .span3 {
+    font-size: 1.2em;
+}
+
+.signi {
+    color:#fff;
+}
+
+.signi:hover {
+    text-decoration: none;
+    color:#fff;
+}

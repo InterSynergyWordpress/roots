@@ -1,8 +1,9 @@
+<?php
+/*
+Template Name: Projects
+*/
+?>
 
-
-<?php (function_exists('putRevSlider')) ? putRevSlider("home") : false ?>
-
-<hr>
 <div class="title-wrapper">
     <h2>Realizacje</h2>
 </div>
@@ -37,5 +38,3 @@
         <a href="<?php echo get_permalink(67); ?>"><img src="/content/media/2013/11/balustrady-szklane.jpg"></a>
     </div>
 </div>
-
-<?php // get_template_part('templates/content', 'page'); ?>

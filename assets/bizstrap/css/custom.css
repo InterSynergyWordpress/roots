@@ -331,6 +331,9 @@ body {
 
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 768px) and (max-width: 979px) {
+    #header-phone-info .head_phone {
+        font-size: 17px;
+    }
     #out_container.boxed, #out_container.boxed-attached {
         width:764px;
     }
@@ -1331,8 +1334,8 @@ ul.socials li {
 }
 .socials a {
     display: block;
-    width: 24px;
-    height: 24px;
+/*    width: 24px;
+    height: 24px;*/
 }
 .socials .flickr {
     background: transparent url('../img/socials_icons.png') top left no-repeat;

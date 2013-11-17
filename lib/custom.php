@@ -3,6 +3,7 @@
  * Custom functions
  */
 
+add_image_size('assortment', 210, 9999); // 300px wide (and unlimited height)
 
 function bizstrap_scripts() {
   wp_deregister_style('roots_main');
@@ -56,6 +57,78 @@ function bizstrap_sidebar_footer_path() {
 
 function bizstrap_widgets_init() {
   // Sidebars
+
+  register_sidebar(array(
+    'name'          => __('Primary', 'roots'),
+    'id'            => 'sidebar-primary',
+    'before_widget' => '<section class="widget %1$s %2$s"><div class="widget-inner">',
+    'after_widget'  => '</div></section>',
+    'before_title'  => '<h2>',
+    'after_title'   => '</h2>',
+  ));
+
+  register_sidebar(array(
+    'name'          => __('Secondary', 'roots'),
+    'id'            => 'sidebar-secondary',
+    'before_widget' => '<section class="widget %1$s %2$s"><div class="widget-inner">',
+    'after_widget'  => '</div></section>',
+    'before_title'  => '<h3>',
+    'after_title'   => '</h3>',
+  ));
+
+  register_sidebar(array(
+    'name'          => __('Header Info', 'roots'),
+    'id'            => 'sidebar-header-info',
+    'before_widget' => '<section class="widget %1$s %2$s"><div class="widget-inner widget-header-info">',
+    'after_widget'  => '</div></section>',
+    'before_title'  => '<h2>',
+    'after_title'   => '</h2>',
+  ));
+
+  register_sidebar(array(
+    'name'          => __('Realizacje', 'roots'),
+    'id'            => 'sidebar-realizacje',
+    'before_widget' => '<section class="widget %1$s %2$s"><div class="widget-inner">',
+    'after_widget'  => '</div></section>',
+    'before_title'  => '<h2>',
+    'after_title'   => '</h2>',
+  ));
+
+  register_sidebar(array(
+    'name'          => __('Asortyment', 'roots'),
+    'id'            => 'sidebar-asortyment',
+    'before_widget' => '<section class="widget %1$s %2$s"><div class="widget-inner">',
+    'after_widget'  => '</div></section>',
+    'before_title'  => '<h2>',
+    'after_title'   => '</h2>',
+  ));
+
+  register_sidebar(array(
+    'name'          => __('Address', 'roots'),
+    'id'            => 'sidebar-address',
+    'before_widget' => '<section class="widget %1$s %2$s"><div class="widget-inner">',
+    'after_widget'  => '</div></section>',
+    'before_title'  => '<h2>',
+    'after_title'   => '</h2>',
+  ));
+
+  register_sidebar(array(
+    'name'          => __('Quality', 'roots'),
+    'id'            => 'sidebar-quality',
+    'before_widget' => '<section class="widget %1$s %2$s"><div class="widget-inner">',
+    'after_widget'  => '</div></section>',
+    'before_title'  => '<h2>',
+    'after_title'   => '</h2>',
+  ));
+
+  register_sidebar(array(
+    'name'          => __('Houres', 'roots'),
+    'id'            => 'sidebar-houres',
+    'before_widget' => '<section class="widget %1$s %2$s"><div class="widget-inner">',
+    'after_widget'  => '</div></section>',
+    'before_title'  => '<h2>',
+    'after_title'   => '</h2>',
+  ));
 
   register_sidebar(array(
     'name'          => __('Social', 'roots'),
